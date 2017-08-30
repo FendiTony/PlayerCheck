@@ -33,22 +33,22 @@ public class PlayerCheck extends JavaPlugin {
 				for (Player playerToCheck : Bukkit.getServer().getOnlinePlayers()) {
 					if (playerToCheck.getName().equalsIgnoreCase(args[0])) {
 						playerToCheck.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20000, 9));
-						playerToCheck.sendMessage(ChatColor.RED + "" + ChatColor.UNDERLINE
+						playerToCheck.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD
 								+ "Stop RIGHT NOW! Admins will check if you're using hacks.");
-						playerToCheck.sendMessage(ChatColor.DARK_RED + "You're going to be checked by: "
-								+ ChatColor.AQUA + player.getName() + ChatColor.RESET + "" + ChatColor.RED + ""
-								+ "If you disconnect you will get banned!!");
+						playerToCheck.sendMessage(ChatColor.DARK_RED + " You're going to be checked by: "
+								+ ChatColor.GOLD + player.getName() + ChatColor.RESET + "" + ChatColor.DARK_RED + ""
+								+ " If you disconnect you will get banned!!");
 						playerFound = true;
 						break;
 
 					}
 				}
 				if (playerFound == false) {
-					player.sendMessage(ChatColor.RED + args[0] + "Is not online");
+					player.sendMessage(ChatColor.RED + args[0] + " Is not online");
 					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_PLACE, 1.0f, 1.0f);
 				}
 			} else
-				player.sendMessage(ChatColor.RED + player.getName() + "You must write a correct command!");
+				player.sendMessage(ChatColor.RED + player.getName() + " You must write a correct command!");
 			player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_PLACE, 1.0f, 1.0f);
 			
 			return true;
