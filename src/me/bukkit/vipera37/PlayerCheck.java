@@ -45,7 +45,7 @@ if(player.hasPermission("check.use")) {
 						playerToCheck.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD
 								+ "Stop RIGHT NOW! Admins will check if you're using hacks.");
 						playerToCheck.sendMessage(ChatColor.DARK_RED + " You're going to be checked by: "
-								+ ChatColor.GOLD + player.getName() + ChatColor.RESET + "" + ChatColor.DARK_RED + ""
+								+ ChatColor.GREEN + player.getName() + ChatColor.RESET + "" + ChatColor.DARK_RED + ""
 								+ " If you disconnect you will get banned!!");
 						playerFound = true;
 						break;
