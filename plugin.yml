@@ -1,7 +1,7 @@
 name: PlayerCheck
-main: me.vipera37.PlayerCheck
+main: me.bukkit.vipera37.PlayerCheck
 version: 1.0
 commands:
    check:
-      description: Blank description.
+      description: dank aaaa sdadsd
       usage: /<command>

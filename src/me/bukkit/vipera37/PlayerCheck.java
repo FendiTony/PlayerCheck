@@ -50,6 +50,7 @@ public class PlayerCheck extends JavaPlugin {
 			} else
 				player.sendMessage(ChatColor.RED + player.getName() + "You must write a correct command!");
 			player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_PLACE, 1.0f, 1.0f);
+			
 			return true;
 		}
 
