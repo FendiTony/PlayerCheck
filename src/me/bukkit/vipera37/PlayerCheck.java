@@ -13,9 +13,9 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 public class PlayerCheck extends JavaPlugin {
-
+	
 	public Permission playerPermission = new Permission("check.use");
-
+	
 	@Override
 	public void onEnable() {
 		getLogger().info("Plugin has been enabled correctly!");
@@ -33,16 +33,14 @@ public class PlayerCheck extends JavaPlugin {
 		if (cmd.getName().equalsIgnoreCase("check") && sender instanceof Player) {
 
 			Player player = (Player) sender;
-
+if(player.hasPermission("check.use")) {
 			int lenght = args.length;
 			if (lenght == 1) {
 				boolean playerFound = false;
-
+				
 				for (Player playerToCheck : Bukkit.getServer().getOnlinePlayers()) {
-
-					if (playerToCheck.getName().equalsIgnoreCase(args[0]))
-						;
-					if (player.hasPermission("check.use")) {
+					
+					if (playerToCheck.getName().equalsIgnoreCase(args[0])) {
 						playerToCheck.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20000, 9));
 						playerToCheck.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD
 								+ "Stop RIGHT NOW! Admins will check if you're using hacks.");
@@ -54,7 +52,7 @@ public class PlayerCheck extends JavaPlugin {
 
 					}
 				}
-
+			
 				if (playerFound == false) {
 					player.sendMessage(ChatColor.RED + args[0] + " Is not online");
 					player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_PLACE, 1.0f, 1.0f);
@@ -62,7 +60,7 @@ public class PlayerCheck extends JavaPlugin {
 			} else
 				player.sendMessage(ChatColor.RED + player.getName() + " You must write a correct command!");
 			player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_PLACE, 1.0f, 1.0f);
-
+}
 			return true;
 		}
 
