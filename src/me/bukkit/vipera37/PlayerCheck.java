@@ -13,7 +13,7 @@ import org.bukkit.potion.PotionEffectType;
 public class PlayerCheck extends JavaPlugin {
 	@Override
 	public void onEnable() {
-		getLogger().info(ChatColor.LIGHT_PURPLE + "Plugin has been enabled correctly!");
+		getLogger().info("Plugin has been enabled correctly!");
 	}
 
 	@Override

@@ -3,7 +3,7 @@ version: 1.0
 author: FendiTony
 description: Very simple plugin to check if a player is using hacks this plugin adverts him and freeze him!
 website: https://fenditony.github.io/
-main: me.bukkit.vipera37.PlayerCheck
+main: me.vipera37.PlayerCheck
 commands:
 check:
 description: no time to write this stuff
