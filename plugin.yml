@@ -3,5 +3,5 @@ main: me.vipera37.PlayerCheck
 version: 1.0
 commands:
    check:
-      description: check a specific player
+      description: Blank description.
       usage: /<command>

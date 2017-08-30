@@ -36,7 +36,7 @@ public class PlayerCheck extends JavaPlugin {
 						playerToCheck.sendMessage(ChatColor.RED + "" + ChatColor.UNDERLINE
 								+ "Stop RIGHT NOW! Admins will check if you're using hacks.");
 						playerToCheck.sendMessage(ChatColor.DARK_RED + "You're going to be checked by: "
-								+ ChatColor.AQUA + "" + player.getName() + ChatColor.RESET + "" + ChatColor.RED + ""
+								+ ChatColor.AQUA + player.getName() + ChatColor.RESET + "" + ChatColor.RED + ""
 								+ "If you disconnect you will get banned!!");
 						playerFound = true;
 						break;
