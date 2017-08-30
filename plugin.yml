@@ -1,10 +1,9 @@
 name: PlayerCheck
-version: 1.0
+version: 1.0.1
 author: FendiTony
 description: Very simple plugin to check if a player is using hacks this plugin adverts him and freeze him!
 website: https://fenditony.github.io/
-main: me.vipera37.PlayerCheck
+main: me.bukkit.vipera37.PlayerCheck
 commands:
 check:
-description: no time to write this stuff
 usage: /check <player> 
