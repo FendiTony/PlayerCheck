@@ -35,7 +35,7 @@ public class PlayerCheck extends JavaPlugin {
 		PluginManager pm = getServer().getPluginManager();
 
 		pm.addPermission(playerPermission);
-		
+
 		new PlayerListener(this);
 
 	}
@@ -75,7 +75,8 @@ public class PlayerCheck extends JavaPlugin {
 									+ ChatColor.GOLD + player.getName() + ChatColor.RESET + "" + ChatColor.DARK_RED + ""
 
 									+ " If you disconnect you will get banned!!");
-							playerToCheck.sendMessage(ChatColor.BLUE + "" + ChatColor.BOLD + "!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-");
+							playerToCheck.sendMessage(ChatColor.BLUE + "" + ChatColor.BOLD
+									+ "!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-");
 
 							playerFound = true;
 
