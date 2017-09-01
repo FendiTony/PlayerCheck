@@ -77,6 +77,7 @@ public class PlayerCheck extends JavaPlugin {
 									+ " If you disconnect you will get banned!!");
 							playerToCheck.sendMessage(ChatColor.BLUE + "" + ChatColor.BOLD
 									+ "!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-");
+							player.sendMessage(ChatColor.YELLOW + player.getName() + "You succesfully adverted " + playerToCheck.getName());
 
 							playerFound = true;
 
