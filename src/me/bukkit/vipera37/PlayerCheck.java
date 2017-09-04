@@ -22,6 +22,9 @@ import org.bukkit.potion.PotionEffect;
 
 import org.bukkit.potion.PotionEffectType;
 
+import me.bukkit.vipera37.commands.Check;
+import me.bukkit.vipera37.commands.Uncheck;
+
 public class PlayerCheck extends JavaPlugin {
 
 	public Permission playerPermission = new Permission("check.use");
@@ -37,77 +40,14 @@ public class PlayerCheck extends JavaPlugin {
 		pm.addPermission(playerPermission);
 
 		new PlayerListener(this);
+		getCommand("check").setExecutor(new Check());
+		getCommand("uncheck").setExecutor(new Uncheck());
 
 	}
 
 	@Override
 
 	public void onDisable() {
-
-	}
-
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-
-		if (cmd.getName().equalsIgnoreCase("check") && sender instanceof Player) {
-
-			Player player = (Player) sender;
-
-			if (player.hasPermission("check.use")) {
-
-				int lenght = args.length;
-
-				if (lenght == 1) {
-
-					boolean playerFound = false;
-
-					for (Player playerToCheck : Bukkit.getServer().getOnlinePlayers()) {
-
-						if (playerToCheck.getName().equalsIgnoreCase(args[0])) {
-
-							playerToCheck.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20000, 9));
-
-							playerToCheck.sendMessage(ChatColor.DARK_RED + "" + ChatColor.BOLD
-
-									+ "Stop RIGHT NOW! Admins will check if you're using hacks.");
-
-							playerToCheck.sendMessage(ChatColor.DARK_RED + " You're going to be checked by: "
-
-									+ ChatColor.GOLD + player.getName() + ChatColor.RESET + "" + ChatColor.DARK_RED + ""
-
-									+ " If you disconnect you will get banned!!");
-							playerToCheck.sendMessage(ChatColor.BLUE + "" + ChatColor.BOLD
-									+ "!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-");
-							player.sendMessage(ChatColor.YELLOW + player.getName() + "You succesfully adverted " + playerToCheck.getName());
-
-							playerFound = true;
-
-							break;
-
-						}
-
-					}
-
-					if (playerFound == false) {
-
-						player.sendMessage(ChatColor.RED + args[0] + " Is not online");
-
-						player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_PLACE, 1.0f, 1.0f);
-
-					}
-
-				} else
-
-					player.sendMessage(ChatColor.RED + player.getName() + " You must write a correct command!");
-
-				player.playSound(player.getLocation(), Sound.ENTITY_VILLAGER_NO, 1.0f, 1.0f);
-
-			}
-
-			return true;
-
-		}
-
-		return false;
 
 	}
 

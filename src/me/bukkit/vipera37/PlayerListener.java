@@ -2,7 +2,7 @@ package me.bukkit.vipera37;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.PlayerKickEvent;
 
 public class PlayerListener implements Listener {
 
@@ -12,7 +12,12 @@ public class PlayerListener implements Listener {
 	}
 
 	@EventHandler
-	public void onCheckUse(PlayerQuitEvent event) {
-
+	public void onCheckCommand(PlayerKickEvent event) {
+		
 	}
+	
+		
+	
+	
+	
 }

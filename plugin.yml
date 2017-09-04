@@ -5,3 +5,6 @@ commands:
    check:
       description: dank aaaa sdadsd
       usage: /<command>
+   uncheck:
+      description: UNCHECK A PLAYER!
+      usage: /<command>
