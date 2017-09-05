@@ -23,6 +23,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import me.bukkit.vipera37.commands.Check;
+import me.bukkit.vipera37.commands.Info;
 import me.bukkit.vipera37.commands.Uncheck;
 
 public class PlayerCheck extends JavaPlugin {
@@ -42,6 +43,7 @@ public class PlayerCheck extends JavaPlugin {
 		new PlayerListener(this);
 		getCommand("check").setExecutor(new Check());
 		getCommand("uncheck").setExecutor(new Uncheck());
+		getCommand("cinfo").setExecutor(new Info());
 
 	}
 
