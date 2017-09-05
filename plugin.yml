@@ -8,3 +8,6 @@ commands:
    uncheck:
       description: UNCHECK A PLAYER!
       usage: /<command>
+   info: 
+      description: informations
+      usage: /<command>

@@ -43,7 +43,7 @@ public class Check implements CommandExecutor {
 									+ " If you disconnect you will get banned!!");
 							playerToCheck.sendMessage(ChatColor.BLUE + "" + ChatColor.BOLD
 									+ "!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-");
-							player.sendMessage(ChatColor.YELLOW + player.getName() + "You succesfully adverted:"
+							player.sendMessage(ChatColor.YELLOW + player.getName() + " You succesfully adverted: "
 									+ playerToCheck.getName());
 							playerToCheck.teleport(player);
 
