@@ -8,6 +8,6 @@ commands:
    uncheck:
       description: UNCHECK A PLAYER!
       usage: /<command>
-   info: 
+   cinfo: 
       description: informations
       usage: /<command>
