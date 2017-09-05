@@ -1,26 +1,10 @@
 package me.bukkit.vipera37;
 
-import org.bukkit.Bukkit;
-
-import org.bukkit.ChatColor;
-
-import org.bukkit.Sound;
-
-import org.bukkit.command.Command;
-
-import org.bukkit.command.CommandSender;
-
-import org.bukkit.entity.Player;
-
 import org.bukkit.permissions.Permission;
 
 import org.bukkit.plugin.PluginManager;
 
 import org.bukkit.plugin.java.JavaPlugin;
-
-import org.bukkit.potion.PotionEffect;
-
-import org.bukkit.potion.PotionEffectType;
 
 import me.bukkit.vipera37.commands.Check;
 import me.bukkit.vipera37.commands.Info;
